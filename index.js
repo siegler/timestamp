@@ -3,6 +3,8 @@ const app = express()
 const path = require('path')
 const moment = require('moment')
 
+const port = process.env.PORT || 3000;
+
 //A few common date formats to search for
 const formats = [
     "MMMM D, YYYY",
@@ -37,6 +39,6 @@ app.get('/:data', (req, res) => {
     }
 })
 
-app.listen(3000, () => {
+app.listen(port, () => {
     console.log('listening on port 3000!')
 })
